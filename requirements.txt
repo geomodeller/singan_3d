@@ -1,0 +1,29 @@
+# ============================================================================
+# SinGAN 3D - Requirements
+# 3D Volume Generation using SinGAN Architecture
+# ============================================================================
+
+# Core Deep Learning Framework
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Numerical Computing
+numpy>=1.24.0
+
+# Data Visualization (필수)
+matplotlib>=3.6.0
+
+# Scientific Data I/O (선택적 - NIfTI 파일 지원)
+nibabel>=5.0.0
+
+# Jupyter Notebook Support (노트북 실행용)
+jupyter>=1.0.0
+ipython>=8.0.0
+
+# ============================================================================
+# 설치 방법:
+# pip install -r requirements.txt
+# 
+# CUDA 지원을 위해서는 PyTorch를 먼저 CUDA 버전으로 설치하는 것을 권장합니다:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+# ============================================================================ 
