@@ -1,0 +1,10 @@
+
+25.6.22 : 
+python main_v_0.0.3.py --input_name "single_channel_3d.npy" --outdir "Output_second_sample_v3" --min_size 5 --niter 10_000 --nfc 32 --num_layer 5 --gpu 0
+
+
+25.6.24:
+HJ
+python main_v_0.0.3.py --input_name "single_channel_3d.npy" --outdir "Output_second_sample_v3" --min_size 5 --niter 20_000 --nfc 32 --ker_size 3 --num_layer 5 --gpu 0
+SA
+python main_v_0.0.3.py --input_name "single_channel_3d.npy" --outdir "Output_second_sample_v4" --min_size 6 --scale_factor 1.15 --niter 1 --nfc 32 --ker_size 3 --num_layer 6 --gpu 1
