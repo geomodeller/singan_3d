@@ -3,6 +3,7 @@
 #  - add a visualization every 5000 epoch
 #  - fix initialization
 #  - make all print into logging so that it can be read external file 
+#  - first time to clone to KOGAS 2025.6.26
 # =============================================================================
 
 # =============================================================================
