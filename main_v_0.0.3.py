@@ -442,7 +442,10 @@ def train_3d_singan(real_volume, opt, device):
                         prev_rec_for_G = stored_reconstructions[scale_idx_actual + 1].detach() # Use stored reconstruction
 
                     prev_rec_upsampled_for_G = upsample_3d(prev_rec_for_G, scale_factor=scale_factor_r)
-                    prev_rec_upsampled_for_G = F.interpolate(prev_rec_upsampled_for_G, size=current_size, mode='trilinear', align_corners=False)
+                    prev_rec_upsampled_for_G = F.interpolate(prev_rec_upsampled_for_G, 
+                                                             size=current_size, 
+                                                             mode='trilinear', 
+                                                             align_corners=False)
 
                     reconstruction = netG(rec_noise_this_scale, prev_rec_upsampled_for_G)
                     errG_rec = F.mse_loss(reconstruction, real_vol_at_scale) * opt.alpha
@@ -512,7 +515,9 @@ def train_3d_singan(real_volume, opt, device):
 # =============================================================================
 # Generation Function
 # =============================================================================
-def generate_3d_sample(trained_generators_state_dicts, fixed_noise_maps, pyramid, opt, device, gen_start_scale=0, custom_noise_shape=None):
+def generate_3d_sample(trained_generators_state_dicts, 
+                       # fixed_noise_maps, 
+                       pyramid, opt, device, gen_start_scale=0, custom_noise_shape=None):
     num_scales = len(trained_generators_state_dicts)
     generators = []
     # Load generators from state dicts
